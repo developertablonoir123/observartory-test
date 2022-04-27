@@ -1,10 +1,10 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /rct-website/
+RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule . /rct-website/index.html [L]
+RewriteRule . /index.html [L]
 
 </IfModule>
 # X-XSS-Protection
@@ -13,7 +13,7 @@ Header set X-XSS-Protection "1; mode=block"
 	Header set X-Frame-Options "SAMEORIGIN"
 	Header set X-Content-Type-Options "nosniff"
 	Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
-    Header set Content-Security-Policy "default-src https://www.abiteoffrance.com/rct-website/; child-src 'none'; object-src 'none'"
+    Header set Content-Security-Policy "default-src https://developertablonoir123.github.io/observartory-test/; child-src 'none'; object-src 'none'"
 	Header set Referrer-Policy "same-origin"
 	Header set Permissions-Policy "same-origin"
 	Header set Feature-Policy "geolocation 'self'; vibrate 'none'"
